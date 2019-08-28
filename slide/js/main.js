@@ -56,8 +56,8 @@
     addCurrentClass();
     setMainImage(images[currentNum]);
   });
-
-  const prev = document.getElementById('prev');
+  
+    const prev = document.getElementById('prev');
   prev.addEventListener('click', () => {
     removeCurrentClass();
     currentNum--;
@@ -66,29 +66,5 @@
     }
     addCurrentClass();
     setMainImage(images[currentNum]);
-  });
-
-  let timeoutId;
-
-  function playSlideshow() {
-    timeoutId = setTimeout(() => {
-      next.click();
-      playSlideshow();
-    }, 1000);
-  }
-
-  const play = document.getElementById('play');
-  const pause = document.getElementById('pause');
-
-  play.addEventListener('click', () => {
-    play.classList.add('hidden');
-    pause.classList.remove('hidden');
-    playSlideshow();
-  });
-
-  pause.addEventListener('click', () => {
-    play.classList.remove('hidden');
-    pause.classList.add('hidden');
-    clearTimeout(timeoutId);
   });
 }
