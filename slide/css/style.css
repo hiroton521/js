@@ -43,10 +43,6 @@ nav li:hover {
   background: #f8f8f8;
 }
 
-#play, #pause {
-  width: 140px;
-}
-
 .thumbnails {
   display: grid;
   grid-template-columns: repeat(5, 56px);
